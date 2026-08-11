@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Performance Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h1>AI Student Performance Prediction</h1>
+
+<form action="/predict" method="POST">
+
+    <label>Study Hours</label>
+    <input type="number" name="StudyHours" step="0.1" required>
+
+    <label>Attendance (%)</label>
+    <input type="number" name="Attendance" required>
+
+    <label>Previous Marks</label>
+    <input type="number" name="PreviousMarks" required>
+
+    <label>Assignments Completed</label>
+    <input type="number" name="Assignments" required>
+
+    <label>Sleep Hours</label>
+    <input type="number" name="SleepHours" step="0.1" required>
+
+    <label>Internet Access</label>
+    <select name="InternetAccess">
+        <option>Yes</option>
+        <option>No</option>
+    </select>
+
+    <label>Family Support</label>
+    <select name="FamilySupport">
+        <option>Yes</option>
+        <option>No</option>
+    </select>
+
+    <br><br>
+
+    <button type="submit">Predict</button>
+
+</form>
+
+</body>
+</html>
